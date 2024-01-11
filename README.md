@@ -19,7 +19,7 @@
 1. Ejecute la clase Main.java
 2. Siga las instrucciones en pantalla
 
-## 7. Funcionalidades Principales
+## 5. Funcionalidades Principales
 ### Clase User.java
 #### La clase User tiene como objetivo representar un usuario con propiedades esenciales. Se definen las siguientes propiedades:
 
@@ -138,3 +138,29 @@ Validaciones:
 - Verifica que el identificador de usuario sea un número entero positivo.
 - Obtención y Muestra de Usuario: Obtiene el usuario correspondiente al identificador ingresado y muestra su información.
 - Iteración y Salida: Pregunta al usuario si desea obtener información de otro usuario (YES/NO). de Usuarios:
+
+## 6. Gestión de Errores
+
+### Menú Principal (Main class)
+#### En la clase Main, se implementa una gestión robusta de errores para manejar posibles problemas durante la interacción del usuario con el menú. Se utiliza un bloque try-catch para capturar posibles excepciones de tipo InputMismatchException, que pueden ocurrir si el usuario ingresa un valor no válido al seleccionar una opción.
+#### En caso de error, se imprime un mensaje de error indicando que se debe ingresar un valor válido. Además, se utiliza un bloque finally para asegurarse de que el programa espere una entrada del usuario antes de continuar, proporcionando una experiencia de usuario más amigable.
+
+### Servicio de Usuarios (UserService class)
+#### En la clase UserService, se implementa una gestión de errores proactiva para garantizar la integridad de los datos. Se lanzan excepciones de tipo IllegalArgumentException en casos donde se intenta realizar operaciones con datos inválidos, como un ID no positivo o la eliminación de un usuario que no existe.
+#### Estas excepciones proporcionan mensajes claros que describen el error específico, permitiendo una fácil identificación y resolución de problemas.
+
+### Controlador de Obtener por ID (GetById class)
+#### El controlador GetById maneja excepciones de tipo IllegalArgumentException cuando se intenta obtener un usuario por su ID. Si se ingresa un ID no válido o si el usuario no existe en la base de datos, se imprime un mensaje de error indicando la naturaleza del problema.
+
+### Controlador de Asignación de Rol (AssignedRole class)
+#### El controlador AssignedRole utiliza la misma estrategia, lanzando excepciones de tipo IllegalArgumentException en caso de que se ingresen datos inválidos al intentar asignar un rol a un usuario. Los mensajes de error proporcionan detalles sobre la naturaleza del problema, facilitando la corrección por parte del usuario.
+
+
+## 7. Contribuciones y Colaboraciones
+   ### Instrucciones para Contribuir
+   - Haga un fork del repositorio: https://github.com/Brianjr12/CRUD-PRUEBA-JAVA.
+   - Cree una nueva rama: git checkout -b feature/nueva-caracteristica.
+   - Envíe un Pull Request.
+
+## 8. Contacto
+### Enviar un correo al: brianojeda1204@gmail.com
